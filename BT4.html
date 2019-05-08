@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT4</title>
+</head>
+<p>Nhập vào đây một số nguyên làm phần tử của mảng</p>
+<input id="input" type="text">
+<input type="button" value="add" onclick="them()">
+<input type="button" value="Hiển thị" onclick="out()">
+<p id="daura"></p>
+<body>
+<script>
+    let arr=[];
+    let i=0;
+
+    function them() {
+        let nhap= parseInt(document.getElementById("input").value);
+        arr[i]= nhap;
+        i++;
+        document.getElementById("input").value= "";
+        console.log(arr);
+    }
+
+    function out() {
+        document.getElementById("daura").innerHTML= "Mảng vừa nhập:"+arr +"<br>"+ "Đảo ngược mảng vừa nhập:" + arr.reverse();
+    }
+</script>
+</body>
+</html>

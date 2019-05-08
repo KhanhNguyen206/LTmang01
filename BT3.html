@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT3</title>
+</head>
+<body>
+<script>
+    let input = parseInt(prompt("Nhập vào một số nguyên để làm phần tử của mảng"));
+    let arr=[];
+    for(let i=0; input !== 0; i++){
+        arr[i]= input;
+        input = parseInt(prompt("Nhập vào một số nguyên để làm phần tử của mảng"));
+    }
+    document.write("<br>");
+
+    let max=0;
+    let tong=0;
+    for(i=0; i<arr.length; i++){
+        if(arr[i]>max){
+            max=arr[i];
+        }
+        tong+= arr[i];
+    }
+    console.log(max);
+    console.log(tong);
+</script>
+</body>
+</html>

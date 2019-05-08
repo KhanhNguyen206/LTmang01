@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BT7</title>
+</head>
+<body>
+
+
+<p>Nhập vào đây một số kiểm tra xem có trong mảng hay không?</p>
+<input id="v" type="text">
+<input type="button" value="Hiển thị" onclick="out()">
+<p id="daura"></p>
+<p id="xoa"></p>
+<script>
+    let arr=[4,6,12,16,24,20,27,11,15,41];
+
+    function kiemtra(giaTriCanKiemTra) {
+        for (let i=0; i<arr.length; i++) {
+            if (giaTriCanKiemTra == arr[i]) {
+                return true;
+            }
+        }
+        return  false;
+    }
+
+    function out() {
+        let so=parseInt(document.getElementById("v").value);
+        if(kiemtra(so)== true){
+            document.getElementById("daura").innerHTML="V is in the array";
+            for (let i=0; i<arr.length; i++){
+                if(so==arr[i]){
+                    arr.splice(i,1);
+                }
+            }
+            document.getElementById("xoa").innerHTML= arr;
+        }else{
+            document.getElementById("daura").innerHTML="V is not in the array";
+        }
+        document.getElementById("v").value="";
+    }
+</script>
+</body>
+</html>
